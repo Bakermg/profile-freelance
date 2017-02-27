@@ -1,6 +1,7 @@
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  background-color: #eceff1;
 }
 p {
   font-size: 20px;
@@ -23,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -47,17 +48,17 @@ hr.star-primary:after {
   padding: 0 0.25em;
 }
 hr.star-light {
-  border-color: white;
+  border-color: #CF6866;
 }
 hr.star-light:after {
   background-color: #2c3e50;
-  color: white;
+  color: #CF6866;
 }
 hr.star-primary {
   border-color: #667D92;
 }
 hr.star-primary:after {
-  background-color: white;
+  background-color: #eceff1;
   color: #667D92;
 }
 .img-centered {
@@ -75,10 +76,15 @@ header .container {
 header img {
   display: block;
   margin: 0 auto 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border: 5px solid #8EAEBD;
 }
 header .intro-text .name {
   display: block;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Bungee Shade', cursive;
+  color: #8EAEBD;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2em;
@@ -86,6 +92,7 @@ header .intro-text .name {
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
+  color: #8EAEBD;
 }
 @media (min-width: 768px) {
   header .container {
@@ -101,7 +108,7 @@ header .intro-text .skills {
 }
 .navbar-custom {
   background: #667D92;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   border: none;
@@ -110,19 +117,20 @@ header .intro-text .skills {
   outline: none;
 }
 .navbar-custom .navbar-brand {
-  color: white;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #eceff1;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:active,
 .navbar-custom .navbar-brand.active {
-  color: white;
+  color: #333;
 }
 .navbar-custom .navbar-nav {
   letter-spacing: 1px;
 }
 .navbar-custom .navbar-nav li a {
-  color: white;
+  color: #eceff1;
 }
 .navbar-custom .navbar-nav li a:hover {
   color: #2c3e50;
@@ -143,15 +151,15 @@ header .intro-text .skills {
   background: #2c3e50;
 }
 .navbar-custom .navbar-toggle {
-  color: white;
+  color: #eceff1;
   text-transform: uppercase;
   font-size: 10px;
-  border-color: white;
+  border-color: #eceff1;
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
   background-color: #2c3e50;
-  color: white;
+  color: #eceff1;
   border-color: #2c3e50;
 }
 @media (min-width: 768px) {
@@ -193,6 +201,9 @@ section.success {
     padding-top: 75px;
   }
 }
+#portfolio {
+  background-color: #eceff1;
+}
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
@@ -202,6 +213,11 @@ section.success {
   position: relative;
   max-width: 400px;
   margin: 0 auto;
+}
+#portfolio .portfolio-item .portfolio-link img {
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
   background: rgba(44, 62, 80, 0.9);
@@ -241,6 +257,9 @@ section.success {
     margin: 0 0 30px;
   }
 }
+#about {
+  color: #eceff1;
+}
 .floating-label-form-group {
   position: relative;
   margin-bottom: 0;
@@ -257,7 +276,6 @@ section.success {
   border-radius: 0;
   font-size: 1.5em;
   background: none;
-  box-shadow: none !important;
   resize: none;
 }
 .floating-label-form-group label {

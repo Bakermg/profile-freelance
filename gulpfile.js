@@ -6,10 +6,6 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 14bed6ee152f4d69bb298c6c15008b3f964ac21c
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
