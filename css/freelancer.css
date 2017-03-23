@@ -260,6 +260,31 @@ section.success {
 #about {
   color: #eceff1;
 }
+#content {
+  padding: 20px 0;
+}
+#content h1 {
+  color: #eceff1;
+}
+#content h2 {
+  text-align: left;
+  font-size: 2.4em;
+  color: #CF6866;
+  padding: 10px 0 15px 0;
+}
+#content h3 {
+  text-align: left;
+}
+#content p {
+  text-align: left;
+}
+#content a,
+#content .more-link {
+  color: #CF6866;
+}
+#content pre {
+  text-align: left;
+}
 .floating-label-form-group {
   position: relative;
   margin-bottom: 0;
