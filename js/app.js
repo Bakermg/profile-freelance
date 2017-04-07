@@ -73,7 +73,7 @@
             })
 
         //Fire off api call
-
+        // var getBlog = function() {
             // $('#blog-button').hide();
             // $('#content').empty();
             // $('#content').append('<h1>Recent Post</h1');
