@@ -21,12 +21,12 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-	color: @theme-success;
+	color: @accent-primary;
 	outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Racing Sans One', cursive;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -53,21 +53,21 @@ hr.star-primary:after {
 }
 
 hr.star-light {
-    border-color: #CF6866;
+    border-color: @accent-primary;
 }
 
 hr.star-light:after {
-    background-color: @theme-success;
+    background-color: @gray-light;
     color: @accent-primary;
 }
 
 hr.star-primary {
-    border-color: @theme-primary;
+    border-color: @gray-light;
 }
 
 hr.star-primary:after {
     background-color: @muted-background;
-    color: @theme-primary;
+    color: @gray-light;
 }
 
 .img-centered {
@@ -76,7 +76,7 @@ hr.star-primary:after {
 
 header {
 	text-align: center;
-	background: @theme-success;
+	background: @gray-light;
 	color: white;
 	.container {
 		padding-top: 100px;
@@ -85,24 +85,25 @@ header {
 	img {
 		display: block;
 		margin: 0 auto 20px;
-		border-radius: 20px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		border: 5px solid @blue-accent;
+		padding-bottom: 20px;
+		// border-radius: 20px;
+		// -webkit-border-radius: 20px;
+		// -moz-border-radius: 20px;
+		// border: 5px solid @blue-accent;
 	}
 	.intro-text {
 		.name {
 			display: block;
 			font-family: 'Bungee Shade', cursive;
-			color: @blue-accent;
+			color: @muted-background;
 			text-transform: uppercase;
 			font-weight: 700;
 			font-size: 2em;
 		}
 		.skills {
 			font-size: 1.25em;
-			font-weight: 300;
-			color: @blue-accent;
+			color: @muted-background;
+			font-family: 'Racing Sans One', cursive;
 		}
 	}
 }
@@ -110,7 +111,7 @@ header {
 @media(min-width:768px) {
 	header {
 		.container {
-			padding-top: 200px;
+			padding-top: 150px;
 			padding-bottom: 100px;
 		}
 		.intro-text {
@@ -118,15 +119,16 @@ header {
 				font-size: 4.75em;
 			}
 			.skills {
-				font-size: 1.75em;
+				font-size: 2.5em;
 			}
 		}
 	}
 }
 
-.navbar-custom {
-	background: @theme-primary;
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.navbar-default {
+	background-color: @nav-gray;
+	border-color: fade(@theme-success, 5%);
+	font-family: 'Racing Sans One', cursive;
 	text-transform: uppercase;
 	font-weight: 700;
 	border: none;
@@ -134,7 +136,7 @@ header {
 		outline: none;
 	}
 	.navbar-brand {
-		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-family: 'Racing Sans One', cursive;
 		color: @muted-background;
 		&:hover,
 		&:focus,
@@ -149,7 +151,7 @@ header {
 			a {
 				color: @muted-background;
 				&:hover {
-					color: @theme-success;
+					color: @accent-primary;
 					outline: none;
 				}
 				&:focus,
@@ -160,12 +162,12 @@ header {
 			&.active {
 				a {
 					color: white;
-					background: @theme-success;
+					background: @accent-primary;
 					&:hover,
 					&:focus,
 					&:active {
 						color: white;
-						background: @theme-success;
+						background: @accent-primary;
 					}
 				}
 			}
@@ -186,7 +188,9 @@ header {
 }
 
 @media(min-width:768px) {
-    .navbar-custom {
+    .navbar-default {
+    	background-color: transparent;
+    	border-color: fade(white, 30%);
         padding: 25px 0;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
@@ -198,7 +202,8 @@ header {
 	        transition: all 0.3s;
 	    }
     }
-    .navbar-custom.affix {
+    .navbar-default.affix {
+    	background-color: @nav-gray;
         padding: 10px 0;
 		.navbar-brand {
 	        font-size: 1.5em;
@@ -215,7 +220,7 @@ section {
 }
 
 section.success {
-	background: @theme-success;
+	background: @gray-light;
 	color: white;
 }
 
@@ -229,7 +234,7 @@ section.success {
 }
 
 #portfolio {
-	background-color: #eceff1;
+	background-color: @gray-lighter;
     .portfolio-item {
         margin: 0 0 15px;
         right: 0;
@@ -299,7 +304,7 @@ section.success {
 	h2{
 		text-align: left;
 		font-size: 2.4em;
-		color: @accent-primary;
+		color: @gray-dark;
 		padding: 10px 0 15px 0;
 	}
 	h3 {
@@ -380,14 +385,14 @@ footer {
 	}
 	.footer-above {
 		padding-top: 50px;
-		background-color: @theme-primary;
+		background-color: @gray;
 	}
 	.footer-col {
 		margin-bottom: 50px;
 	}
 	.footer-below {
 		padding: 25px 0;
-		background-color: darken(@theme-primary, 5%);
+		background-color: darken(@gray, 5%);
 	}
 }
 
@@ -416,7 +421,7 @@ footer {
 }
 
 .btn-success {
-	.button-variant(white; @theme-success; @theme-success);
+	.button-variant(white; @gray-dark; @theme-success);
 	font-weight: 700;
 }
 
